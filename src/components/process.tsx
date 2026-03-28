@@ -42,10 +42,10 @@ export function Process() {
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.2 }}
               className="relative">
-              <span className="text-6xl font-black text-zinc-900 absolute -top-8 -left-2 select-none">{s.num}</span>
+              <span className="text-6xl font-black text-zinc-800 absolute -top-8 -left-2 select-none">{s.num}</span>
               <div className="relative pt-6">
                 <h3 className="text-2xl font-black mb-3">{s.title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-4">{s.desc}</p>
+                <p className="text-zinc-300 text-sm leading-relaxed mb-4">{s.desc}</p>
                 <p className="text-[10px] font-mono text-cyan-400/70 uppercase tracking-wider">{s.detail}</p>
               </div>
             </motion.div>

@@ -40,7 +40,7 @@ function FAQItem({ q, a, i }: { q: string; a: string; i: number }) {
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
       <button onClick={() => setOpen(!open)}
-        className="w-full glass rounded-xl p-5 text-left flex items-center justify-between gap-4 hover:border-zinc-700 transition-colors">
+        className="w-full glass-strong rounded-xl p-5 text-left flex items-center justify-between gap-4 hover:border-zinc-600 transition-colors">
         <span className="text-sm font-bold text-zinc-200">{q}</span>
         <span className={`text-zinc-500 transition-transform ${open ? "rotate-45" : ""}`}>+</span>
       </button>

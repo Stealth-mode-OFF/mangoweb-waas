@@ -28,7 +28,7 @@ const PROBLEMS = [
 
 export function Problem() {
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section className="py-24 md:py-32 px-6 section-alt">
       <div className="max-w-5xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-16">
@@ -43,10 +43,10 @@ export function Problem() {
             <motion.div key={i}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-              className="glass rounded-2xl p-6 md:p-8 bento-card">
+              className="glass-strong rounded-2xl p-6 md:p-8 bento-card">
               <span className="text-3xl mb-4 block">{p.icon}</span>
               <h3 className="text-xl font-black mb-3">{p.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-6">{p.desc}</p>
+              <p className="text-zinc-300 text-sm leading-relaxed mb-6">{p.desc}</p>
               <div className="pt-4 border-t border-zinc-800">
                 <span className="text-2xl font-black text-gradient">{p.stat}</span>
                 <p className="text-[10px] font-mono text-zinc-600 mt-1 uppercase tracking-wider">{p.statLabel}</p>

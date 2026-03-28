@@ -23,7 +23,7 @@ export function CTASection() {
 
         <motion.form initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="glass rounded-2xl p-6 md:p-10 max-w-lg mx-auto"
+          className="glass-strong rounded-2xl p-6 md:p-10 max-w-lg mx-auto"
           action="https://formspree.io/f/placeholder" method="POST">
           <div className="space-y-4">
             <div>
