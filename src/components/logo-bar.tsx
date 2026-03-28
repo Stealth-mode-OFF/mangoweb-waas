@@ -1,31 +1,32 @@
 "use client";
 
-import { motion } from "motion/react";
-
 const CLIENTS = [
   "Pilsner Urquell", "Economia", "Alma Career", "Respekt",
-  "Skoda Auto", "Rekola", "Goodlok",
+  "Škoda Auto", "Rekola", "Goodlok",
 ];
 
 export function LogoBar() {
+  const doubled = [...CLIENTS, ...CLIENTS];
+
   return (
-    <section className="py-12 border-y border-zinc-900">
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-        className="max-w-5xl mx-auto px-6">
-        <p className="text-center text-xs font-mono text-zinc-500 uppercase tracking-[0.2em] mb-6">
-          Důvěřuje nám 150+ firem
-        </p>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-          {CLIENTS.map((name, i) => (
-            <motion.div key={name}
-              initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="text-zinc-600 font-bold text-sm md:text-base tracking-wide hover:text-zinc-400 transition-colors cursor-default">
+    <section className="py-16 border-y border-stone-200/60 overflow-hidden">
+      <p className="text-center text-xs font-mono text-stone-400 uppercase tracking-[0.2em] mb-8">
+        Důvěřuje nám 150+ firem
+      </p>
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#FAFAF9] to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#FAFAF9] to-transparent z-10" />
+        <div className="flex animate-marquee">
+          {doubled.map((name, i) => (
+            <span
+              key={i}
+              className="shrink-0 mx-8 md:mx-12 text-stone-300 font-bold text-lg md:text-xl tracking-wide hover:text-stone-500 transition-colors cursor-default select-none"
+            >
               {name}
-            </motion.div>
+            </span>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -29,34 +29,41 @@ function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: stri
 const METRICS = [
   { value: 95, suffix: "+", label: "Lighthouse score", desc: "Každý náš web" },
   { value: 15, suffix: "+", label: "Let zkušeností", desc: "Od 2010" },
-  { value: 150, suffix: "+", label: "Dodaných projektů", desc: "Pro české i zahraniční firmy" },
-  { value: 40, suffix: "%", label: "Nárůst konverzí", desc: "Průměrné zlepšení u klientů" },
+  { value: 150, suffix: "+", label: "Dodaných projektů", desc: "České i zahraniční firmy" },
+  { value: 40, suffix: "%", label: "Nárůst konverzí", desc: "Průměr u klientů" },
 ];
 
 export function Metrics() {
   return (
-    <section id="reference" className="py-24 md:py-32 px-6 relative">
-      <div className="beam w-full absolute top-0" />
+    <section className="py-24 md:py-32 px-6 section-warm">
       <div className="max-w-5xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="text-center mb-16">
-          <p className="text-xs font-mono text-cyan-400 uppercase tracking-[0.2em] mb-4">Výsledky</p>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
-            Čísla, co <span className="text-gradient">mluví.</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.2em] mb-4">Výsledky</p>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight text-stone-900">
+            Čísla, co{" "}<span className="text-gradient">mluví.</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {METRICS.map((m, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-              className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-gradient mb-2">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="text-center"
+            >
+              <p className="text-5xl md:text-6xl font-black text-gradient mb-2">
                 <AnimatedNumber target={m.value} suffix={m.suffix} />
               </p>
-              <p className="text-sm font-bold text-zinc-300 mb-1">{m.label}</p>
-              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">{m.desc}</p>
+              <p className="text-sm font-bold text-stone-700 mb-1">{m.label}</p>
+              <p className="text-[10px] font-mono text-stone-400 uppercase tracking-wider">{m.desc}</p>
             </motion.div>
           ))}
         </div>

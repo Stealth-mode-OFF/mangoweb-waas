@@ -4,74 +4,94 @@ import { motion } from "motion/react";
 
 const TIERS = [
   {
-    name: "Web na míru",
-    price: "od 250.000 CZK",
-    desc: "Kompletní web od analýzy po launch.",
-    features: ["Contember CMS", "React + TypeScript", "Responsive design", "SEO základ", "Lighthouse 90+", "3 měsíce podpora"],
-    cta: "Chci nabídku",
-    accent: false,
-  },
-  {
-    name: "WaaS Retainer",
-    price: "od 15.000 CZK/měsíc",
-    desc: "Kontinuální vylepšování. Váš web roste s vámi.",
-    features: ["Všechno z Web na míru", "Měsíční optimalizace", "A/B testování", "Nové funkce", "Prioritní podpora", "Analytika a reporty"],
-    cta: "Chci retainer",
-    accent: true,
-  },
-  {
     name: "Audit webu",
     price: "Zdarma",
+    period: "",
     desc: "Zjistíte kde jste a kam se posunout.",
     features: ["Lighthouse analýza", "Tech stack review", "UX doporučení", "Konkurenční srovnání", "Akční plán", "Hotovo za 48h"],
     cta: "Chci audit",
     accent: false,
+    color: "#22C55E",
+  },
+  {
+    name: "Web na míru",
+    price: "od 250.000",
+    period: "CZK",
+    desc: "Kompletní web od analýzy po launch.",
+    features: ["Contember CMS", "React + TypeScript", "Responsive design", "SEO základ", "Lighthouse 95+", "3 měsíce podpora"],
+    cta: "Chci nabídku",
+    accent: true,
+    color: "#FF6B6B",
+  },
+  {
+    name: "WaaS Retainer",
+    price: "od 15.000",
+    period: "CZK / měsíc",
+    desc: "Váš web roste s vámi. Každý měsíc lepší.",
+    features: ["Vše z Web na míru", "Měsíční optimalizace", "A/B testování", "Nové funkce", "Prioritní podpora", "Analytika a reporty"],
+    cta: "Chci retainer",
+    accent: false,
+    color: "#7C3AED",
   },
 ];
 
 export function Pricing() {
   return (
-    <section id="cenik" className="py-24 md:py-32 px-6 section-alt">
+    <section id="cenik" className="py-24 md:py-32 px-6 section-cream">
       <div className="max-w-5xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="text-center mb-16">
-          <p className="text-xs font-mono text-cyan-400 uppercase tracking-[0.2em] mb-4">Ceník</p>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
-            Transparentní <span className="text-gradient">ceny.</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <p className="text-xs font-mono text-[#FF6B6B] uppercase tracking-[0.2em] mb-4">Ceník</p>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight text-stone-900">
+            Transparentní{" "}<span className="text-gradient">ceny.</span>
           </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {TIERS.map((t, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-              className={`rounded-2xl p-6 md:p-8 bento-card relative ${
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className={`rounded-2xl p-7 card-warm relative ${
                 t.accent
-                  ? "border-2 border-cyan-500/30 bg-gradient-to-b from-cyan-500/10 to-[#111118] shadow-lg shadow-cyan-500/10"
-                  : "card-solid"
-              }`}>
+                  ? "bg-white border-2 shadow-xl shadow-[#FF6B6B]/10"
+                  : "bg-white border border-stone-200"
+              }`}
+              style={t.accent ? { borderColor: `${t.color}40` } : undefined}
+            >
               {t.accent && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full aurora text-[10px] font-bold text-white uppercase tracking-wider">
-                  Doporučujeme
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-wider warm-gradient">
+                  Nejoblíbenější
                 </div>
               )}
-              <h3 className="text-xl font-black mb-1">{t.name}</h3>
-              <p className="text-2xl font-black text-gradient mb-3">{t.price}</p>
-              <p className="text-zinc-300 text-sm mb-6">{t.desc}</p>
-              <ul className="space-y-2 mb-8">
+              <h3 className="text-xl font-black text-stone-900 mb-1">{t.name}</h3>
+              <div className="mb-3">
+                <span className="text-3xl font-black" style={{ color: t.color }}>{t.price}</span>
+                {t.period && <span className="text-sm text-stone-400 ml-1">{t.period}</span>}
+              </div>
+              <p className="text-stone-500 text-sm mb-6">{t.desc}</p>
+              <ul className="space-y-2.5 mb-8">
                 {t.features.map((f, j) => (
-                  <li key={j} className="flex items-center gap-2 text-sm text-zinc-300">
-                    <span className="text-cyan-400 text-xs">✓</span> {f}
+                  <li key={j} className="flex items-center gap-2.5 text-sm text-stone-600">
+                    <span style={{ color: t.color }}>✓</span> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#audit"
-                className={`block text-center py-3 rounded-xl font-bold text-sm transition-all ${
+              <a
+                href="#audit"
+                className={`block text-center py-3.5 rounded-xl font-bold text-sm transition-all ${
                   t.accent
-                    ? "aurora text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40"
-                    : "glass text-zinc-300 hover:text-white hover:border-zinc-600"
-                }`}>
+                    ? "warm-gradient text-white shadow-lg shadow-[#FF9A9E]/20 hover:shadow-[#FF9A9E]/40 hover:-translate-y-0.5"
+                    : "bg-stone-100 text-stone-700 hover:bg-stone-200"
+                }`}
+              >
                 {t.cta} →
               </a>
             </motion.div>
