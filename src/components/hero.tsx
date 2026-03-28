@@ -15,21 +15,21 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-mono text-cyan-400 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-          15+ let zkusenosti | React + TypeScript + Contember
+          15+ let zkušeností | React + TypeScript + Contember
         </motion.div>
 
         {/* Headline */}
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
           className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight leading-[0.9] mb-6">
           Weby, co{" "}
-          <span className="text-gradient">prodavaji.</span>
+          <span className="text-gradient">prodávají.</span>
         </motion.h1>
 
         {/* Sub */}
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
-          className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Pomahame uspesnym firmam rust diky webum na miru.
-          React, TypeScript, vlastni CMS. Zadny WordPress.
+          className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Pomáháme úspěšným firmám růst díky webům na míru.
+          React, TypeScript, vlastní CMS. Žádný WordPress.
         </motion.p>
 
         {/* CTAs */}
@@ -37,11 +37,11 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#audit"
             className="px-8 py-4 rounded-xl aurora text-white font-bold text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-shadow">
-            Chci bezplatny audit webu
+            Chci bezplatný audit webu
           </a>
           <a href="#reference"
             className="px-8 py-4 rounded-xl glass text-zinc-300 font-semibold text-base hover:text-white hover:border-zinc-600 transition-colors">
-            Podivejte se na reference
+            Podívejte se na reference
           </a>
         </motion.div>
 

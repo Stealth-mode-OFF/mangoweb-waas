@@ -12,8 +12,8 @@ export function LogoBar() {
     <section className="py-12 border-y border-zinc-900">
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
         className="max-w-5xl mx-auto px-6">
-        <p className="text-center text-xs font-mono text-zinc-600 uppercase tracking-[0.2em] mb-6">
-          Duveruje nam 150+ firem
+        <p className="text-center text-xs font-mono text-zinc-500 uppercase tracking-[0.2em] mb-6">
+          Důvěřuje nám 150+ firem
         </p>
         <div className="flex flex-wrap justify-center gap-8 md:gap-12">
           {CLIENTS.map((name, i) => (

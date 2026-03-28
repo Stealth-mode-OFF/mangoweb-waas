@@ -27,10 +27,10 @@ function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: stri
 }
 
 const METRICS = [
-  { value: 95, suffix: "+", label: "Lighthouse score", desc: "Kazdy nas web" },
-  { value: 15, suffix: "+", label: "Let zkusenosti", desc: "Od 2010" },
-  { value: 150, suffix: "+", label: "Dorucenych projektu", desc: "Pro ceske i zahranicni firmy" },
-  { value: 40, suffix: "%", label: "Narust konverzi", desc: "Prumerne zlepesni u klientu" },
+  { value: 95, suffix: "+", label: "Lighthouse score", desc: "Každý náš web" },
+  { value: 15, suffix: "+", label: "Let zkušeností", desc: "Od 2010" },
+  { value: 150, suffix: "+", label: "Dodaných projektů", desc: "Pro české i zahraniční firmy" },
+  { value: 40, suffix: "%", label: "Nárůst konverzí", desc: "Průměrné zlepšení u klientů" },
 ];
 
 export function Metrics() {
@@ -40,9 +40,9 @@ export function Metrics() {
       <div className="max-w-5xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-16">
-          <p className="text-xs font-mono text-cyan-400 uppercase tracking-[0.2em] mb-4">Vysledky</p>
+          <p className="text-xs font-mono text-cyan-400 uppercase tracking-[0.2em] mb-4">Výsledky</p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight">
-            Cisla, co <span className="text-gradient">mluvi.</span>
+            Čísla, co <span className="text-gradient">mluví.</span>
           </h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ export function Metrics() {
                 <AnimatedNumber target={m.value} suffix={m.suffix} />
               </p>
               <p className="text-sm font-bold text-zinc-300 mb-1">{m.label}</p>
-              <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-wider">{m.desc}</p>
+              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">{m.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -14,10 +14,10 @@ export function CTASection() {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
-            Ziskejte <span className="text-gradient">bezplatny audit</span> vaseho webu.
+            Získejte <span className="text-gradient">bezplatný audit</span> vašeho webu.
           </h2>
-          <p className="text-zinc-400 text-lg">
-            Za 48 hodin vite presne, kde vas web ztraci zakazniky. Bez zavazku.
+          <p className="text-zinc-300 text-lg">
+            Za 48 hodin víte přesně, kde váš web ztrácí zákazníky. Bez závazků.
           </p>
         </motion.div>
 
@@ -27,8 +27,8 @@ export function CTASection() {
           action="https://formspree.io/f/placeholder" method="POST">
           <div className="space-y-4">
             <div>
-              <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mb-1 block">Jmeno</label>
-              <input type="text" name="name" required placeholder="Jan Novak"
+              <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mb-1 block">Jméno</label>
+              <input type="text" name="name" required placeholder="Jan Novák"
                 className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-100 placeholder:text-zinc-700 focus:border-cyan-500/50 focus:outline-none transition-colors" />
             </div>
             <div>
@@ -37,16 +37,16 @@ export function CTASection() {
                 className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-100 placeholder:text-zinc-700 focus:border-cyan-500/50 focus:outline-none transition-colors" />
             </div>
             <div>
-              <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mb-1 block">URL vaseho webu</label>
+              <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mb-1 block">URL vašeho webu</label>
               <input type="url" name="website" required placeholder="https://firma.cz"
                 className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-100 placeholder:text-zinc-700 focus:border-cyan-500/50 focus:outline-none transition-colors" />
             </div>
           </div>
           <button type="submit"
             className="w-full mt-6 py-4 rounded-xl aurora text-white font-bold text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all active:scale-[0.98]">
-            Chci bezplatny audit →
+            Chci bezplatný audit →
           </button>
-          <p className="text-[10px] text-zinc-600 text-center mt-3 font-mono">Odpovime do 48 hodin. Zadne zavazky.</p>
+          <p className="text-[10px] text-zinc-500 text-center mt-3 font-mono">Odpovíme do 48 hodin. Žádné závazky.</p>
         </motion.form>
       </div>
     </section>

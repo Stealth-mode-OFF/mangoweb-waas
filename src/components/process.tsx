@@ -5,27 +5,27 @@ import { motion } from "motion/react";
 const STEPS = [
   {
     num: "01",
-    title: "Analyza",
-    desc: "Audit vaseho webu, konkurence a trhu. Lighthouse, tech stack, UX. Za 48h vite presne, kde jste a kam se posunout.",
-    detail: "Bezplatne | 48 hodin | Konkretni doporuceni",
+    title: "Analýza",
+    desc: "Audit vašeho webu, konkurence a trhu. Lighthouse, tech stack, UX. Za 48h víte přesně, kde jste a kam se posunout.",
+    detail: "Bezplatně | 48 hodin | Konkrétní doporučení",
   },
   {
     num: "02",
-    title: "Design + vyvoj",
-    desc: "Navrhneme a postavime web na miru. React, TypeScript, nas vlastni CMS Contember. Zadny sablonovity WordPress.",
-    detail: "6-12 tydnu | Iterativni proces | Vas feedback kazdy tyden",
+    title: "Design + vývoj",
+    desc: "Navrhneme a postavíme web na míru. React, TypeScript, náš vlastní CMS Contember. Žádný šablonovitý WordPress.",
+    detail: "6-12 týdnů | Iterativní proces | Váš feedback každý týden",
   },
   {
     num: "03",
     title: "Launch + podpora",
-    desc: "Nasadime na Vercel, optimalizujeme rychlost, napojime analytiku. A pak vas nenestime — retainer pro kontinualni rust.",
-    detail: "Lighthouse 95+ | SEO ready | Retainer od 15.000 CZK/mesic",
+    desc: "Nasadíme na Vercel, optimalizujeme rychlost, napojíme analytiku. A pak vás neopustíme — retainer pro kontinuální růst.",
+    detail: "Lighthouse 95+ | SEO ready | Retainer od 15.000 CZK/měsíc",
   },
 ];
 
 export function Process() {
   return (
-    <section className="py-24 md:py-32 px-6 relative">
+    <section id="proces" className="py-24 md:py-32 px-6 relative">
       <div className="beam w-full absolute top-0" />
       <div className="max-w-5xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
