@@ -43,7 +43,7 @@ export function Problem() {
             <motion.div key={i}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-              className="glass-strong rounded-2xl p-6 md:p-8 bento-card">
+              className="card-solid rounded-2xl p-6 md:p-8 bento-card">
               <span className="text-3xl mb-4 block">{p.icon}</span>
               <h3 className="text-xl font-black mb-3">{p.title}</h3>
               <p className="text-zinc-300 text-sm leading-relaxed mb-6">{p.desc}</p>

@@ -48,8 +48,8 @@ export function Pricing() {
               viewport={{ once: true }} transition={{ delay: i * 0.15 }}
               className={`rounded-2xl p-6 md:p-8 bento-card relative ${
                 t.accent
-                  ? "border-2 border-cyan-500/30 bg-gradient-to-b from-cyan-500/10 to-transparent shadow-lg shadow-cyan-500/5"
-                  : "glass"
+                  ? "border-2 border-cyan-500/30 bg-gradient-to-b from-cyan-500/10 to-[#141419] shadow-lg shadow-cyan-500/5"
+                  : "card-solid"
               }`}>
               {t.accent && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full aurora text-[10px] font-bold text-white uppercase tracking-wider">
