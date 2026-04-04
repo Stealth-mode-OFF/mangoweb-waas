@@ -1,7 +1,9 @@
+// * Tech stack showcase — Contember CMS is the USP, gets col-span-2 to stand out
 "use client";
 
 import { motion } from "motion/react";
 
+// * Contember and Retainer both span 2 cols — they're the key differentiators vs WordPress shops
 const FEATURES = [
   {
     title: "Contember CMS",

@@ -1,7 +1,9 @@
+// * EAA compliance banner — urgency driver: EU law + deadline creates FOMO for non-compliant sites
 "use client";
 
 import { motion } from "motion/react";
 
+// ! EAA deadline is June 2025 — update copy after that date to past-tense ("your web must comply")
 export function EAA() {
   return (
     <section className="py-24 md:py-32 px-6">

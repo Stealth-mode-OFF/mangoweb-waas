@@ -1,3 +1,4 @@
+// * Accordion feature section — left side: collapsible text, right side: image preview swaps on click
 "use client";
 
 import { useState } from "react";

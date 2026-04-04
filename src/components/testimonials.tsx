@@ -1,7 +1,9 @@
+// * Client testimonials — masonry layout, each card has 5 stars + avatar initials
 "use client";
 
 import { motion } from "motion/react";
 
+// TODO: Replace with real testimonials once we get written permission from clients
 const TESTIMONIALS = [
   {
     text: "manGoweb nám dodal web, který překonal všechna očekávání. Rychlost, design, UX — vše na špičkové úrovni.",
@@ -57,6 +59,7 @@ export function Testimonials() {
           </h2>
         </motion.div>
 
+        {/* * CSS columns = natural masonry without JS, column-fill:balance distributes evenly */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
           {TESTIMONIALS.map((t, i) => (
             <motion.div

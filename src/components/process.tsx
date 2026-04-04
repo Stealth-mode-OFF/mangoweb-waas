@@ -1,7 +1,9 @@
+// * 4-step process timeline — reduces buyer anxiety by showing clear next steps
 "use client";
 
 import { motion } from "motion/react";
 
+// * Each step has a unique color to visually separate phases (audit=red, design=purple, dev=amber, launch=green)
 const STEPS = [
   {
     num: "01",

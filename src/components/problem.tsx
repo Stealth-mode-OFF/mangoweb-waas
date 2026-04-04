@@ -1,7 +1,9 @@
+// * Problem agitation section — three pain points with stats to make visitors feel the urgency
 "use client";
 
 import { motion } from "motion/react";
 
+// * Stats are from real industry research (Google, Stanford) — builds credibility
 const PROBLEMS = [
   {
     icon: "⚡",

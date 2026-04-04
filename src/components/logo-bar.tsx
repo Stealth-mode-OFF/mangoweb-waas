@@ -1,3 +1,4 @@
+// * Social proof marquee — infinite scroll of client names builds trust fast
 "use client";
 
 const CLIENTS = [
@@ -6,6 +7,7 @@ const CLIENTS = [
 ];
 
 export function LogoBar() {
+  // * Doubled array = seamless infinite marquee (CSS animation scrolls first half, then resets)
   const doubled = [...CLIENTS, ...CLIENTS];
 
   return (

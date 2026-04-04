@@ -1,7 +1,9 @@
+// * Portfolio section — bento grid layout, each card = client + metrics to prove ROI
 "use client";
 
 import { motion } from "motion/react";
 
+// * span + imgH control the bento grid layout — Pilsner gets 2x2 as the flagship project
 const CASE_STUDIES = [
   {
     client: "Pilsner Urquell",

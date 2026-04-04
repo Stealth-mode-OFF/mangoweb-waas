@@ -1,8 +1,10 @@
+// * Animated metrics section — numbers count up on scroll for visual impact
 "use client";
 
 import { motion, useInView } from "motion/react";
 import { useRef, useState, useEffect } from "react";
 
+// * Eased counter animation — cubic ease-out makes numbers feel natural, not robotic
 function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -15,7 +17,8 @@ function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: stri
     const duration = 2000;
     const animate = (now: number) => {
       const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
+      // * Cubic ease-out: fast start, gentle end — more satisfying than linear
+    const eased = 1 - Math.pow(1 - progress, 3);
       setValue(Math.round(eased * target));
       if (progress < 1) frame = requestAnimationFrame(animate);
     };

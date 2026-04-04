@@ -1,3 +1,4 @@
+// * FAQ section — handles common objections (WordPress, price, CMS lock-in) to reduce friction
 "use client";
 
 import { motion } from "motion/react";
@@ -8,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// * Each FAQ maps to a real sales objection — "proč ne WordPress" is the #1 question from leads
 const FAQS = [
   { q: "Jak dlouho trvá vytvoření webu?", a: "Typicky 6-12 týdnů od schválení návrhu. Složitější projekty (e-commerce, intranet) 3-6 měsíců. První prototyp vidíte za 2 týdny." },
   { q: "Proč ne WordPress?", a: "WordPress je skvělý pro blogy. Pro firmu co chce růst je ale pomalý, nebezpečný a těžko škálovatelný. Náš stack (React + Contember) je rychlejší, bezpečnější a snadněji se přizpůsobí." },

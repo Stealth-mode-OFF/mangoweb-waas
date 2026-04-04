@@ -1,3 +1,4 @@
+// * Two-tier pricing block with monthly/yearly toggle — shadcnblocks template
 "use client";
 
 import { ArrowRight, CircleCheck } from "lucide-react";

@@ -1,8 +1,10 @@
+// * Hero section — rotating project showcase + animated CTAs, the first thing visitors see
 "use client";
 
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
+// * These match the case studies below — keeps messaging consistent across hero + portfolio
 const PROJECTS = [
   { name: "Pilsner Urquell", gradient: "from-amber-200 via-yellow-300 to-amber-400", url: "pilsner-urquell.cz" },
   { name: "Economia", gradient: "from-sky-200 via-cyan-300 to-blue-400", url: "economia.cz" },
@@ -13,6 +15,7 @@ const PROJECTS = [
 export function Hero() {
   const [active, setActive] = useState(0);
 
+  // * 3s rotation = enough time to read the project name but keeps energy high
   useEffect(() => {
     const id = setInterval(() => setActive((p) => (p + 1) % PROJECTS.length), 3000);
     return () => clearInterval(id);
@@ -20,6 +23,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* * Three overlapping blurred circles = warm ambient glow, matches brand gradient palette */}
       <div className="absolute top-1/4 left-1/5 w-[500px] h-[500px] rounded-full bg-[#FECDA6]/30 blur-[120px] animate-float" />
       <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-[#FF9A9E]/20 blur-[100px] animate-float-delayed" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#A18CD1]/15 blur-[150px] animate-float-slow" />

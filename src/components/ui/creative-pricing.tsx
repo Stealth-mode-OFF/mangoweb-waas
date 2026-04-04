@@ -1,3 +1,4 @@
+// * Hand-drawn style pricing cards — rotated cards with brutalist shadow-box effect
 import { Button } from "@/components/ui/button";
 import { Check, Pencil, Star, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";

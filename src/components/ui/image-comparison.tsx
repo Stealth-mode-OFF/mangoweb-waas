@@ -1,3 +1,4 @@
+// * Before/after image comparison slider — drag or hover to reveal, uses motion springs
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -27,6 +28,7 @@ export type ImageComparisonProps = {
   springOptions?: SpringOptions;
 };
 
+// * Zero bounce + zero duration = instant response, no springy lag on the slider
 const DEFAULT_SPRING_OPTIONS = {
   bounce: 0,
   duration: 0

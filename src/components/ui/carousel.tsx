@@ -1,3 +1,4 @@
+// * Embla carousel wrapper — provides context for prev/next navigation + keyboard support
 "use client"
 
 import * as React from "react"

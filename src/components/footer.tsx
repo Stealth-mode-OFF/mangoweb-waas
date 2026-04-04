@@ -1,3 +1,4 @@
+// * Footer — final CTA + company info + legal (IČO required by Czech law for business sites)
 export function Footer() {
   return (
     <footer className="bg-stone-900 text-white py-16 px-6">

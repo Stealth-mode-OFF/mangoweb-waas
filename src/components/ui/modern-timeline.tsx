@@ -1,5 +1,7 @@
+// * Animated timeline component — vertical with status badges, progress bars, and avatar circles
 "use client"
 
+// ! Uses "framer-motion" (old import) instead of "motion/react" — rest of the project uses motion/react
 import React from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"

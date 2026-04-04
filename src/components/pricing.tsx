@@ -1,7 +1,9 @@
+// * Pricing section — 3 tiers: free audit (lead gen), one-time build, WaaS retainer (recurring revenue)
 "use client";
 
 import { motion } from "motion/react";
 
+// * Middle tier marked as accent=true gets the "Nejoblíbenější" badge — anchoring effect
 const TIERS = [
   {
     name: "Audit webu",

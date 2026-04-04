@@ -1,3 +1,4 @@
+// * Twitter/X-style card embed — used for social proof with glassmorphism styling
 import { VerifiedIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";

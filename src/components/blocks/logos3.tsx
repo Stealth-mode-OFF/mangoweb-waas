@@ -1,3 +1,4 @@
+// * Auto-scrolling logo carousel — Embla carousel with auto-scroll plugin, edge fade masks
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";

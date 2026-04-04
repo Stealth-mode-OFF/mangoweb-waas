@@ -1,3 +1,4 @@
+// * Lead capture form — the #audit anchor is linked from navbar + every CTA on the page
 "use client";
 
 import { motion } from "motion/react";
@@ -5,6 +6,7 @@ import { motion } from "motion/react";
 export function CTASection() {
   return (
     <section id="audit" className="py-24 md:py-32 px-6 relative overflow-hidden">
+      {/* * Subtle warm gradient background separates this from the rest of the page */}
       <div className="absolute inset-0 warm-gradient opacity-[0.07]" />
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#FF9A9E]/10 blur-[120px]" />
       <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] rounded-full bg-[#A18CD1]/10 blur-[100px]" />
@@ -30,6 +32,7 @@ export function CTASection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="bg-white/80 backdrop-blur-xl rounded-3xl p-6 md:p-10 max-w-lg mx-auto border border-stone-200 shadow-xl shadow-stone-200/30"
+          // TODO: Replace with actual Formspree form ID or custom API endpoint
           action="https://formspree.io/f/placeholder"
           method="POST"
         >

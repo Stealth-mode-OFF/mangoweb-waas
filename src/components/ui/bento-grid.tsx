@@ -1,3 +1,4 @@
+// * Generic bento grid component — cards with hover effects, tags, and variable column spans
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -26,6 +27,7 @@ interface BentoGridProps {
     items: BentoItem[];
 }
 
+// ? These are sample items from the library — should we remove them or keep as defaults?
 const itemsSample: BentoItem[] = [
     {
         title: "Analytics Dashboard",

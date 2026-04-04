@@ -1,3 +1,4 @@
+// * Vertical scrolling testimonial column — infinite translateY loop animation
 "use client";
 import React from "react";
 import { motion } from "motion/react";
@@ -22,6 +23,7 @@ export const TestimonialsColumn = (props: {
         }}
         className="flex flex-col gap-6 pb-6 bg-background"
       >
+        {/* * Duplicated array creates seamless loop — translateY -50% resets to identical content */}
         {[
           ...new Array(2).fill(0).map((_, index) => (
             <React.Fragment key={index}>

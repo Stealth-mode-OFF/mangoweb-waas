@@ -1,3 +1,4 @@
+// * Mouse-tracking spotlight card — glow follows cursor using CSS custom properties + pointer events
 import React, { useEffect, useRef, ReactNode } from 'react';
 
 interface GlowCardProps {
@@ -36,6 +37,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
   const cardRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
+  // * Global pointer listener updates CSS custom props — the glow position is calculated in CSS, not JS
   useEffect(() => {
     const syncPointer = (e: PointerEvent) => {
       const { clientX: x, clientY: y } = e;

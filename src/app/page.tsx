@@ -1,3 +1,4 @@
+// * manGoweb WaaS landing page — section order = sales funnel (hook → proof → process → convert)
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { LogoBar } from "@/components/logo-bar";

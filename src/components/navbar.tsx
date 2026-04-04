@@ -1,3 +1,4 @@
+// * Floating navbar — shrinks on scroll, glassmorphism effect, animated CTA border
 "use client";
 
 import { useState, useEffect } from "react";
@@ -14,6 +15,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // * 50px threshold before nav shrinks — keeps it full-width until user clearly scrolls
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handler);
@@ -50,6 +52,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden sm:block">
+          {/* * Animated gradient border draws eye to CTA — auto-rotates so it moves even without hover */}
           <BorderRotate
             animationMode="auto-rotate"
             animationSpeed={3}

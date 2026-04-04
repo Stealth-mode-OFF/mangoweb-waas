@@ -1,10 +1,13 @@
+// * Root layout — sets Czech locale, Geist fonts, and global OG metadata
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// * Geist = Vercel's own font family — pairs well with the modern React stack narrative
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
+// ? Should we add structured data (JSON-LD) for LocalBusiness here?
 export const metadata: Metadata = {
   title: "manGoweb — Weby, co prodávají",
   description: "Pomáháme úspěšným firmám růst díky webům na míru. React, TypeScript, vlastní CMS Contember. 15+ let zkušeností, Lighthouse 95+.",

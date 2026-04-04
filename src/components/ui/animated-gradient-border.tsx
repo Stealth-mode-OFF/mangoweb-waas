@@ -1,3 +1,4 @@
+// * Animated gradient border — uses conic-gradient with CSS custom props for the rotating effect
 import React, { CSSProperties, ReactNode, HTMLAttributes } from 'react';
 
 type AnimationMode = 'auto-rotate' | 'rotate-on-hover' | 'stop-rotate-on-hover';
@@ -58,6 +59,7 @@ const BorderRotate: React.FC<BorderRotateProps> = ({
     }
   };
  
+  // * CSS custom properties drive the animation — JS sets them, CSS @property + @keyframes rotates --gradient-angle
   const combinedStyle: CSSProperties = {
     '--gradient-primary': gradientColors.primary,
     '--gradient-secondary': gradientColors.secondary,
